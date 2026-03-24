@@ -8,6 +8,12 @@ A build-time Expo config plugin that fixes iPad apps running in zoomed iPhone co
 
 Expo's built-in `supportsTablet: true` setting in `app.json` is supposed to set `UIDeviceFamily = [1, 2]` in the final iOS build. Due to a known Expo bug ([#32344](https://github.com/expo/expo/issues/32344)), the setting doesn't propagate to the built `Info.plist`, resulting in `UIDeviceFamily = [1]` (iPhone only). iPad then runs the app in zoomed iPhone compatibility mode instead of at native resolution.
 
+## The solution
+
+Before            |  After
+:-------------------------:|:-------------------------:
+![B](https://github.com/vaiden/expo-eas-ipad-support/blob/main/assets/before.png?raw=true)  |  ![A](https://github.com/vaiden/expo-eas-ipad-support/blob/main/assets/after.png?raw=true)
+
 ## Installation
 
 ```bash
